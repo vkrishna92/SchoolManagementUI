@@ -1,0 +1,57 @@
+<div class="container mt-5">
+    <h3>Teacher Details</h3>
+    <app-bread-crumb [menuItems]="breadCrumb"></app-bread-crumb>
+    <nz-tabset>
+        <nz-tab nzTitle="Teacher Details">
+            <form class="student-form" [formGroup]="teacherForm" nz-form >
+                <div class="row">
+                    <div class="col">
+                        <nz-form-item>
+                            <nz-form-label [nzSpan]="6" nzFor="firsntmae">First name</nz-form-label>
+                            <nz-form-control [nzSpan]="14">
+                              <input nz-input name="firsname" type="text" id="firsname" formControlName="firstName">
+                            </nz-form-control>
+                          </nz-form-item >
+                          <nz-form-item>
+                            <nz-form-label [nzSpan]="6" nzFor="email">Email address</nz-form-label>
+                            <nz-form-control [nzSpan]="14">
+                              <input nz-input name="email" type="email" id="email" formControlName="email">
+                            </nz-form-control>
+                          </nz-form-item >                          
+                          <nz-form-item>
+                            
+                            <nz-form-control [nzSpan]="14">
+                                <nz-radio-group formControlName="gender">
+                                    <label nz-radio nzValue="M">Male</label>
+                                    <label nz-radio nzValue="F">Female</label>                                  
+                                  </nz-radio-group>
+                            </nz-form-control>
+                          </nz-form-item >
+
+                    </div>
+                    <div class="col">
+                        <nz-form-item>
+                            <nz-form-label [nzSpan]="6" nzFor="lastname">Last name</nz-form-label>
+                            <nz-form-control [nzSpan]="14">
+                              <input nz-input name="lastname" type="text" id="lastname" formControlName="lastName">
+                            </nz-form-control>
+                          </nz-form-item >
+                          <nz-form-item>                           
+                            <nz-form-label [nzSpan]="6" nzFor="dob">Date of birth</nz-form-label>
+                            <nz-form-control [nzSpan]="14">
+                              <nz-date-picker class="w-100" formControlName="dob"></nz-date-picker>                                
+                            </nz-form-control>
+                          </nz-form-item >                          
+                    </div>
+                    <div class="col">
+                        
+                    </div>
+                </div>                               
+              </form>
+              <nz-divider></nz-divider>
+              <div class="float-right">
+                <button nz-button nzType="primary" (click)="clickSave()">save</button>
+              </div>
+        </nz-tab>
+    </nz-tabset>
+</div>

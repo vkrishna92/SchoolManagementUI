@@ -1,0 +1,22 @@
+.file-container{
+    background-color: #fafafa;
+    padding: 10px;
+    text-align: center;
+    border: 1px dashed #ccc;    
+    cursor: pointer;
+}
+label{
+    font-weight: lighter !important;
+}
+.material-symbols-outlined{
+    font-size: 50px !important;
+    color: #999;
+}
+.file-summary{
+    padding: 5px;
+}
+.file-preview{
+    display: flex;
+    justify-content: space-between;
+    padding:  5px;
+}

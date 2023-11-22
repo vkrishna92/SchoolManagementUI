@@ -1,0 +1,75 @@
+<div class="container mt-5">    
+    <h2>Student Details</h2>
+    <app-bread-crumb [menuItems]="breadCrumb"></app-bread-crumb>
+    <nz-tabset>
+        <nz-tab nzTitle="Student Details"> 
+            <form class="student-form" [formGroup]="studentForm" nz-form >
+                <div class="row">
+                    <div class="col">
+                        <nz-form-item>
+                            <nz-form-label [nzSpan]="6" nzFor="firsntmae">First name</nz-form-label>
+                            <nz-form-control [nzSpan]="14">
+                              <input nz-input name="firsname" type="text" id="firsname" formControlName="firstName">
+                            </nz-form-control>
+                          </nz-form-item >
+                          <nz-form-item>
+                            <nz-form-label [nzSpan]="6" nzFor="email">Email address</nz-form-label>
+                            <nz-form-control [nzSpan]="14">
+                              <input nz-input name="email" type="email" id="email" formControlName="email">
+                            </nz-form-control>
+                          </nz-form-item >
+                          <nz-form-item>
+                            <nz-form-label [nzSpan]="6">Grade</nz-form-label>
+                            <nz-form-control [nzSpan]="14">
+                              <nz-select formControlName="grade">
+                                <nz-option *ngFor="let g of grades" [nzValue]="g" [nzLabel]="g"></nz-option>                                
+                              </nz-select>
+                            </nz-form-control>
+                          </nz-form-item>
+                          <nz-form-item>
+                            
+                            <nz-form-control [nzSpan]="14">
+                                <nz-radio-group formControlName="gender">
+                                    <label nz-radio nzValue="M">Male</label>
+                                    <label nz-radio nzValue="F">Female</label>                                  
+                                  </nz-radio-group>
+                            </nz-form-control>
+                          </nz-form-item >
+
+                    </div>
+                    <div class="col">
+                        <nz-form-item>
+                            <nz-form-label [nzSpan]="6" nzFor="lastname">Last name</nz-form-label>
+                            <nz-form-control [nzSpan]="14">
+                              <input nz-input name="lastname" type="text" id="lastname" formControlName="lastName">
+                            </nz-form-control>
+                          </nz-form-item >
+                          <nz-form-item>                           
+                            <nz-form-label [nzSpan]="6" nzFor="dob">Date of birth</nz-form-label>
+                            <nz-form-control [nzSpan]="14">
+                              <nz-date-picker class="w-100" formControlName="dob"></nz-date-picker>                                
+                            </nz-form-control>
+                          </nz-form-item >
+                          <nz-form-item>
+                            <nz-form-label [nzSpan]="6" nzFor="section">Section</nz-form-label>
+                            <nz-form-control [nzSpan]="14">
+                              <input nz-input name="section" type="text" id="section" formControlName="section">
+                            </nz-form-control>
+                          </nz-form-item >
+                    </div>
+                    <div class="col">
+                        
+                    </div>
+                </div>                               
+              </form>
+              
+        </nz-tab>
+        <nz-tab nzTitle="Parent Details" [nzDisabled]="true">Content of Tab Pane 2</nz-tab>
+        <nz-tab nzTitle="Contact Details" [nzDisabled]="true">Content of Tab Pane 3</nz-tab>
+      </nz-tabset>
+      <nz-divider></nz-divider>
+      <div class="float-right">
+        <button nz-button nzType="primary" (click)="clickSave()">save</button>
+      </div>
+      
+</div>

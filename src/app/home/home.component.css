@@ -1,0 +1,28 @@
+/* home.component.css */
+
+.tile-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+   
+  }
+  
+  .tile {
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tile h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .tile p {
+    font-size: 14px;
+  }
+  

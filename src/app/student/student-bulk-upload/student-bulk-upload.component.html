@@ -1,0 +1,15 @@
+<div class="container">         
+  <app-file-upload (onFileChangeEvent)="onFileChange($event)"></app-file-upload>
+  <div class="file-preview">
+    <h3>File Preview:</h3>
+    <button  class="import-btn" nz-button nzShape="round" nzType="primary" (click)="importData()">Import</button>
+</div>
+<nz-spin [nzSpinning]="isLoading" >
+    <div class="student-grid">
+        <ag-grid-angular #agGrid
+        style="width: 100%; height: 400px"
+        class="ag-theme-balham"
+        [columnDefs]="columnDef"
+        [rowData]="rowDate" [pagination]="true" [paginationPageSize]="50"></ag-grid-angular>
+    </div>
+</nz-spin>

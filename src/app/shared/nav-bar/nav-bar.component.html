@@ -1,0 +1,49 @@
+<div class="appnavbar"> 
+    <div>
+        <span *ngIf="username$ | async" (click)="open()" class="menu-icon material-symbols-outlined">
+            menu
+        </span>
+        <span class="company-name" [routerLink]="['/home']" routerLinkActive="router-link-active" >        
+            Irvington High School
+        </span>
+    </div> 
+    
+    <div class="right-content"  *ngIf="username$ | async">        
+        <span class="material-symbols-outlined notification-icon">
+            notifications
+        </span>
+        <a class="username" nz-dropdown [nzDropdownMenu]="menu">
+            {{username$ | async}}
+            <span nz-icon nzType="down"></span>
+          </a>
+          <nz-dropdown-menu #menu="nzDropdownMenu">
+            <ul nz-menu nzSelectable>              
+              <li nz-menu-item>Profile</li>              
+              <li nz-menu-item nzDanger (click)="clickLogout()">Logout</li>
+            </ul>
+          </nz-dropdown-menu>        
+    </div>
+</div>
+<nz-drawer
+[nzClosable]="false"
+[nzVisible]="sidenavOpen"
+nzPlacement="left"
+nzTitle="Irvington High School"
+(nzOnClose)="close()"
+>
+<ng-container *nzDrawerContent>
+    <ul nz-menu nzMode="inline">
+        <li nz-submenu nzTitle="Student" >
+            <ul>
+                <li nz-menu-item [routerLink]="['/student']" routerLinkActive="router-link-active"  >Students</li>                                        
+            </ul>
+        </li>
+        <li nz-submenu nzTitle="Institution Setup">
+            <ul>
+                <li nz-menu-item [routerLink]="['/teacher']" routerLinkActive="router-link-active"  >Teachers</li>                                        
+            </ul>
+        </li>
+        
+    </ul> 
+</ng-container>
+</nz-drawer>

@@ -1,0 +1,22 @@
+<div class="file-container mt-5">
+    <label for="fileInput">
+        <p class="ant-upload-drag-icon">
+            <span class="material-symbols-outlined">
+                upload
+                </span>
+          </p>
+          
+          <p class="ant-upload-text">Click or drag file to this area to upload</p>
+          <p class="ant-upload-hint">
+            Support for a single or bulk upload. Strictly prohibit from uploading company data or other band files
+          </p>
+    </label>
+    <input hidden type="file" id="fileInput" (change)="onFileChange($event)"/>
+</div>
+<nz-progress [nzPercent]="counter" nzSize="small"></nz-progress>
+<div class="file-summary">
+    <h3>File Summary:</h3>
+    <p>Name: {{ selectedFile?.name }}</p>
+    <p>Size: {{ selectedFile?.size }} bytes</p>
+    
+</div>

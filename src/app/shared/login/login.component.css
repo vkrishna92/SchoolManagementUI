@@ -1,0 +1,50 @@
+/* Reset some default styles */
+/* Center the login form */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* Style the login container */
+.login-container {
+    margin-top: 5%;
+    display: flex;
+    justify-content:center;
+    text-align: center;
+}
+
+/* Style the input fields */
+.input-field {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+}
+
+/* Style the login button */
+.login-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Style the registration link */
+.registration-link {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.login-btn{
+    margin-top: 20px;
+}
+.register-link{
+    margin-top: 10px;
+}

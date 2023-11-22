@@ -1,0 +1,65 @@
+@import "../node_modules/ng-zorro-antd/style/index.min.css"; 
+@import '/node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import 'ag-grid-community/styles/ag-grid.css';
+@import 'ag-grid-community/styles/ag-theme-balham.css';
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 200,
+    'GRAD' 0,
+    'opsz' 20
+  }
+  .ant-drawer-body{
+    padding: 0px !important;
+}
+.toolbar {
+  background-color: #f5f5f5; /* Light gray background color */
+  padding: 2px 20px; /* Adjust padding as needed */
+  border: 1px solid #ccc; 
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for separation */
+}
+[nz-button]{
+  text-transform: uppercase;
+}
+
+/* Style the date input field */
+input[type="date"] {
+  appearance: none; /* Remove default styling */
+  padding: 0.3em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+}
+
+/* Add a custom background color when focused */
+input[type="date"]:focus {
+  background-color: #f0f0f0;
+}
+
+/* Style placeholder text */
+input[type="date"]::placeholder {
+  color: #999;
+  text-indent: 10px;
+}
+
+/* Style the selected date value */
+input[type="date"]::-webkit-datetime-edit {
+  color: #333;
+}
+
+/* Style the date dropdown/calendar */
+input[type="date"]::-webkit-calendar-picker-wrapper {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+/* Style the date dropdown/calendar arrows */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  
+  color: #fff; /* Change arrow icon color */
+  padding: 3px;
+  border-radius: 4px;
+}

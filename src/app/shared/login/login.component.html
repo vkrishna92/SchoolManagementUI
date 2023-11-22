@@ -1,0 +1,15 @@
+<div class="login-container">
+    <nz-spin [nzSpinning]="isLoading" >
+        <nz-card >
+            <h2>LOGIN</h2>
+            <form [formGroup]="loginForm">
+                <input nz-input type="email" class="input-field" placeholder="Email Address" formControlName="email">
+                <input nz-input type="password" class="input-field" placeholder="Password" formControlName="password">
+                <button nz-button class="login-btn" nzType="primary" (click)="clickLogin()">Login</button>
+            </form>
+            <p class="register-link">Don't have an account? <a href="registration.html" class="registration-link">Register here</a></p>
+        </nz-card>
+    </nz-spin>
+    
+    
+</div>
